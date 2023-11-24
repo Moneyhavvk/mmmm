@@ -1,0 +1,2168 @@
+html.staticsPageBody {
+    font-size: 12px;
+    color: #0F0F0F;
+    min-width: 1180px;
+    text-size-adjust: none;
+}
+@media screen and (max-width: 1180px) {
+    html.staticsPageBody {
+        min-width: inherit;
+    }
+}
+.staticsPageBody * {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    vertical-align: baseline;
+    -webkit-overflow-scrolling: touch;
+    list-style: none;
+    font-family: Hind-Light, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+}
+@media screen and (max-width: 768px) {
+    html.staticsPageBody {
+        font-size: calc((((16 / 375) * 100vw) * 0.625));
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior: contain;
+    }
+    .staticsPageBody * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        vertical-align: baseline;
+        -webkit-overflow-scrolling: touch;
+        list-style: none;
+        font-family: Hind-Medium, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        touch-action: pan-x pan-y;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        user-select: none;
+        -webkit-touch-callout: none;
+    }
+    .staticsPageBody input,
+    .staticsPageBody textarea {
+        user-select: auto;
+        border-radius: 0;
+    }
+    .staticsPageBody select {
+        border-radius: 0;
+    }
+    .staticsPageBody a {
+        border: none;
+        text-decoration: none;
+        color: #0F0F0F;
+    }
+    .staticsPageBody a:hover {
+        text-decoration: none;
+    }
+    .staticsPageBody select,
+    .staticsPageBody input,
+    .staticsPageBody textarea,
+    .staticsPageBody button {
+        appearance: none;
+        outline: none;
+        border: none;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-appearance: none;
+    }
+}
+.staticsPageBody a {
+    border: none;
+    text-decoration: none;
+    color: #0F0F0F;
+}
+
+.staticsPageBody a:hover {
+    text-decoration: none;
+}
+
+.staticsPageBody select,
+.staticsPageBody input,
+.staticsPageBody textarea {
+    appearance: none;
+}
+
+.staticsPageBody input.err, 
+.staticsPageBody textarea.err {
+    border: 1px solid #cb0000;
+}
+.staticsPageBody .errMsg {
+    color: #cb0000;
+}
+.staticsPageBody .topSinceTip {
+    background-color: #0F0F0F;
+    line-height: 21px;
+    padding: 10px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Hind-Medium, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    position: relative;
+    z-index: 12;
+}
+.staticsPageBody .registerAndSignheader {
+    clear: both;
+}
+.staticsPageBody .registerAndSignheader .logo {
+    display: block;
+    margin: 58px 0 0 67px;
+    cursor: pointer;
+}
+.staticsPageBody .registerAndSignheader .logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.staticsPageBody input::-webkit-credentials-auto-fill-button {
+    display: none !important;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+}
+.staticsPageBody input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+/************************* components start *************************/
+.staticsPageBody .checkbox {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #0f0f0f;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.staticsPageBody .checkbox.active {
+    background-color: #0f0f0f;
+}
+.staticsPageBody .checkbox.active:before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    top: -10%;
+    width: 4px;
+    height: 10px;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    transform: rotateZ(45deg);
+    color: #fff;
+}
+.staticsPageBody .radio {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #0f0f0f;
+    border-radius: 100%;
+    position: relative;
+    cursor: pointer;
+}
+.staticsPageBody .radio.active:before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #0f0f0f;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -5px 0 0 -5px;
+}
+.staticsPageBody .btn {
+    text-align: center;
+    color: #fff;
+    background-color: #0F0F0F;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    text-transform: uppercase;
+    height: 40px;
+    line-height: 42px;
+    font-size: 14px;
+    font-family: Hind-Medium, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    letter-spacing: 1px;
+}
+.staticsPageBody .btn.cancel {
+    background-color: #cccccc;
+}
+.staticsPageBody .btn.disabled {
+    background-color: rgba(27, 27, 27, 0.4);
+    cursor: inherit;
+}
+.staticsPageBody .defaultLoading,
+.staticsPageBody .btnLoading {
+    margin: 20px auto;
+    border-radius: 100%;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    border: 2px solid;
+    border-bottom-color: transparent;
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    display: none;
+    animation: loadingDefault 1s 0s linear infinite;
+    clear: both;
+    overflow: hidden;
+    color: #0f0f0f;
+}
+.staticsPageBody .defaultLoading.active,
+.staticsPageBody .btnLoading.active {
+    display: block;
+}
+.staticsPageBody .btnLoading {
+    margin: 12px auto;
+    height: 12px;
+    width: 12px;
+    border-color: #fff;
+    border-bottom-color: transparent;
+}
+.staticsPageBody .siteLoading,
+.staticsPageBody .pageLoading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999999;
+    background-color: #ffffff;
+}
+.staticsPageBody .pageLoading {
+    background: rgba(0, 0, 0, 0.4);
+}
+.staticsPageBody .pageLoading:after {
+    position: fixed;
+    z-index: 99999;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    content: '';
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    -webkit-animation: loadingPage 1s infinite ease-in-out;
+    animation: loadingPage 1s infinite ease-in-out;
+    background: #fff;
+}
+
+@-webkit-keyframes loadingPage {
+    0% {
+        -webkit-transform: scale(0);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes loadingPage {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+@keyframes loadingDefault {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+.staticsPageBody .publicDialog {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+.staticsPageBody .publicDialog.active {
+    display: flex;
+}
+.staticsPageBody .publicDialog .pageBg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: bgFadeIn 0.2s linear;
+    animation-fill-mode: both;
+}
+.staticsPageBody .publicDialog .dialogBody {
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff;
+    padding: 40px;
+    max-width: calc(100% - 100px);
+    max-height: calc(100% - 50px);
+    overflow: hidden;
+    animation: showA 0.2s linear;
+    animation-fill-mode: both;
+    overflow-y: auto;
+}
+.staticsPageBody .publicDialog .closeBtn {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 22px;
+    top: 22px;
+    z-index: 20;
+}
+.staticsPageBody .publicDialog .closeBtn:before,
+.staticsPageBody .publicDialog .closeBtn:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    display: block;
+    height: 2px;
+    top: 9px;
+    background-color: #9f9f9f;
+}
+
+.staticsPageBody .publicDialog .closeBtn:before {
+    transform: rotate(45deg);
+}
+
+.staticsPageBody .publicDialog .closeBtn:after {
+    transform: rotate(-45deg);
+}
+@keyframes showA {
+    0% {
+        transform: scale3d(0, 0, 0);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+@keyframes bgFadeIn {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+@media screen and (max-width: 768px) {
+    .staticsPageBody .btn {
+        display: block;
+        width: 100%;
+        height: 4.4rem;
+        margin: 0 auto;
+        padding: 0 1.2rem;
+        font-size: 1.4rem;
+        line-height: 4.4rem;
+        text-align: center;
+        white-space: nowrap;
+        cursor: pointer;
+        background-image: none;
+        border: 0.1rem solid transparent;
+        border-radius: 0.2rem;
+        box-sizing: border-box;
+        color: #fff;
+        background-color: rgba(27, 27, 27, 1);
+        overflow: hidden;
+        text-transform: uppercase;
+        user-select: none;
+        outline: none;
+        appearance: none;
+        -webkit-tap-highlight-color: transparent;
+        font-family: Hind-Medium, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        letter-spacing: 0.05rem;
+    }
+
+    .staticsPageBody .btn.cancel {
+        background-color: #cccccc;
+    }
+
+    .staticsPageBody .btn.disabled {
+        background-color: #cccccc;
+    }
+    .staticsPageBody input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
+    }
+    .staticsPageBody .btnLoading {
+        margin: 1.2rem auto;
+        height: 1.2rem;
+        width: 1.2rem;
+        border-width: 0.2rem;
+    }
+    .staticsPageBody .publicDialog .dialogBody {
+        position: relative;
+        z-index: 1;
+        background-color: #ffffff;
+        width: 100%;
+        max-width: 34.3rem;
+        overflow: hidden;
+        animation-fill-mode: both;
+        box-sizing: border-box;
+        border-radius: 0.4rem;
+        padding: 0;
+    }
+    .staticsPageBody .publicDialog .closeBtn {
+        width: 1.8rem;
+        height: 1.8rem;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    .staticsPageBody .publicDialog .closeBtn:before,
+    .staticsPageBody .publicDialog .closeBtn:after {
+        content: '';
+        position: absolute;
+        width: 1.8rem;
+        display: block;
+        height: 0.2rem;
+        top: 0.9rem;
+    }
+}
+/************************* components end *************************/
+/************************* login page start *************************/
+.loginPage .body {
+    margin: auto;
+    max-width: 500px;
+    padding: 60px 0;
+    text-align: left;
+}
+.loginPage .title {
+    font-size: 24px;
+    text-align: center;
+    font-family: Hind-SemiBold, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+.loginPage .rowA {
+    padding: 0 0 10px 0;
+}
+.loginPage .rowA label {
+    font-size: 16px;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+    font-family: Hind-SemiBold, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+}
+.loginPage .emailRow {
+    position: relative;
+}
+.loginPage .rowA input.normal {
+    border: 1px solid #d1d1d1;
+}
+
+.loginPage .rowA input:focus {
+    border: 1px solid #0f0f0f;
+}
+
+.loginPage .rowA input {
+    box-sizing: border-box;
+    padding: 10px 70px 10px 18px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+}
+.loginPage .emailSuffix {
+    z-index: 3;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #ffffff;
+    border: 1px solid #d1d1d1;
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 32px;
+    font-size: 14px;
+}
+.loginPage .emailSuffix li {
+    cursor: pointer;
+    padding: 0 18px;
+}
+.loginPage .emailSuffix li:first-child {
+    padding-top: 3px;
+}
+.loginPage .emailSuffix li:last-child {
+    padding-bottom: 3px;
+}
+.loginPage .emailSuffix li:active,
+.loginPage .emailSuffix li:hover {
+    background: #f3f3f3;
+}
+.loginPage .inputBox {
+    position: relative;
+}
+.loginPage .tabPsd {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    margin-top: -10px;
+    z-index: 1;
+    cursor: pointer;
+    display: none;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.loginPage .tabPsd.tabPsdShow {
+    background-position: center 4px;
+}
+.loginPage .tabPsd.active {
+    display: block;
+}
+.loginPage .rowA .errMsg {
+    margin-top: 5px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+}
+.loginPage .forgotArea {
+    float: right;
+    line-height: 14px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 0 5px 0;
+    text-decoration: underline;
+}
+.loginPage .forgotArea:hover {
+    text-decoration: none;
+}
+.loginPage .remberMeArea {
+    position: relative;
+    overflow: hidden;
+    font-size: 16px;
+    padding: 30px 0 20px 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.loginPage .remberMeArea .remember {
+    display: flex;
+    cursor: pointer;
+    justify-content: flex-start;
+    align-items: center;
+    width: 150px;
+}
+.loginPage .remberMeArea .checkTips {
+    color: #666666;
+    font-size: 16px;
+    padding: 10px 0 0 0;
+}
+.loginPage .remberMeArea .remember .checkbox {
+    float: left;
+    margin: -2px 10px 0 0;
+}
+.loginPage .continue {
+    margin-top: 22px;
+    text-transform: uppercase;
+}
+.loginPage .noAccount {
+    text-align: center;
+    font-size: 16px;
+    padding-top: 30px;
+}
+
+.loginPage .noAccount a {
+    cursor: pointer;
+    text-decoration: underline;
+    padding-bottom: 2px;
+}
+.loginPage .noAccount a:hover {
+    text-decoration: underline;
+}
+.loginPage .note {
+    text-align: center;
+    color: #666666;
+    line-height: 28px;
+    padding-top: 40px;
+    font-size: 14px;
+    font-style: normal;
+}
+.loginPage .orRow {
+    height: 36px;
+    position: relative;
+    overflow: hidden;
+}
+.loginPage .orRow:before {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #d1d1d1;
+    margin-top: 17px;
+}
+.loginPage .orRow span {
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -18px;
+    color: #777777;
+    text-transform: lowercase;
+}
+.loginPage .mt16 {
+    margin-top: 16px;
+}
+.loginPage .appleLoginBtn,
+.loginPage .googleLoginBtn,
+.loginPage .phoneLoginBtn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    border: 1px solid #0f0f0f;
+    overflow: hidden;
+    cursor: pointer;
+    padding-left: 156px;
+    position: relative;
+}
+.loginPage .appleLoginBtn .appleButton {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.loginPage .appleLoginBtn .appleIco,
+.loginPage .googleLoginBtn .googleIco,
+.loginPage .phoneLoginBtn .phoneIco {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.loginPage .appleLoginBtn .appleIco {
+    margin-top: -4px;
+}
+.loginPage .appleLoginBtn span,
+.loginPage .googleLoginBtn span,
+.loginPage .phoneLoginBtn span {
+    font-family: Hind-Medium, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    line-height: 43px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.loginPage .hideDom {
+    display: none;
+}
+.loginPage .clearIco {
+    display: none;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: center;
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    margin-top: -12px;
+}
+.loginPage  .passwordWarp .clearIco {
+    right: 48px;
+}
+.loginPage .clearIco.active {
+    display: block;
+}
+.loginPage .noEscortService {
+    display: none;
+}
+.loginPage .loginErr {
+    text-align: center;
+    padding-bottom: 20px;
+    display: none;
+}
+.loginPage .loginErr.active {
+    display: block;
+}
+.loginPage .gRecaptcha {
+    display: flex;
+    justify-content: center;
+}
+.loginPage .chooseVerifyType {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: none;
+}
+.loginPage .chooseVerifyType.active {
+    display: block;
+}
+.loginPage .chooseVerifyType .content {
+    margin: auto;
+    max-width: 500px;
+    padding: 200px 0;
+    text-align: left;
+}
+.loginPage .chooseVerifyType  h2 {
+    margin-bottom: 62px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 38px;
+    text-transform: uppercase;
+    font-family: Hind-SemiBold, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+}
+.loginPage .chooseVerifyType .p1 {
+    font-size: 14px;
+    line-height: 21px;
+    font-family: Hind-Light, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+}
+.loginPage .chooseVerifyType .mt62 {
+    margin-top: 62px;
+}
+.loginPage .chooseVerifyType .mt24 {
+    margin-top: 24px;
+}
+.loginPage .chooseVerifyType .typeItems {
+    display: flex;
+    margin: 25px 0 78px 0;
+}
+.loginPage .chooseVerifyType .typeItems li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    flex-shrink: 0;
+}
+.loginPage .chooseVerifyType .typeItems li input[type=radio] {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid #0f0f0f;
+    margin-top: -3px;
+    cursor: pointer;
+}
+.loginPage .chooseVerifyType .typeItems li input[type=radio]:checked::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #0f0f0f;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    position: absolute;
+}
+.loginPage .chooseVerifyType .typeItems li label {
+    font-size: 14px;
+    color: #0f0f0f;
+    line-height: 21px;
+    margin-left: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+.loginPage .chooseVerifyType .chooseVerifyTypeHeader {
+    display: none;
+}
+.loginPage .loginTwoVerify {
+    max-width: 620px;
+}
+.loginPage .loginTwoVerify .loginTwoVerifyTitle {
+    font-size: 20px;
+    line-height: 52px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #d9d9d9;
+    text-transform: uppercase;
+    font-family: Hind-SemiBold, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+}
+.loginPage .loginTwoVerify .text {
+    padding: 35px 0;
+    font-size: 16px;
+    color: #1b1b1b;
+    line-height: 30px;
+    padding-right: 4px;
+    text-align: center;
+}
+.loginPage .loginTwoVerify .numbers {
+    display: flex;
+    justify-content: center;
+}
+.loginPage .loginTwoVerify input.normal {
+    border: 1px solid #d1d1d1;
+}
+
+.loginPage .loginTwoVerify input:focus {
+    border: 1px solid #0f0f0f;
+}
+
+.loginPage .loginTwoVerify input {
+    box-sizing: border-box;
+    padding: 6px 0;
+    font-size: 16px;
+    display: block;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    margin: 0 4px;
+    border-radius: 2px;
+}
+
+.loginPage .loginTwoVerify input:first-child {
+    margin-left: 0;
+}
+.loginPage .loginTwoVerify .tryAgain {
+    font-size: 16px;
+    line-height: 44px;
+    padding-left: 20px;
+    color: #999;
+    display: flex;
+}
+.loginPage .loginTwoVerify .tryAgain.active {
+    color: #0f0f0f;
+    cursor: pointer;
+}
+.loginPage .loginTwoVerify .tryAgain span {
+    display: block;
+}
+.loginPage .loginTwoVerify .tryAgain span.countTime {
+    min-width: 30px;
+}
+.loginPage .loginTwoVerify .resend {
+    font-size: 16px;
+    line-height: 44px;
+    padding-left: 20px;
+    color: #111;
+    cursor: pointer;
+}
+.loginPage .loginTwoVerify .troubeEmail {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #1b1b1b;
+    line-height: 24px;
+}
+.loginPage .loginTwoVerify .troubeEmail a {
+    text-decoration: underline;
+}
+.loginPage .loginTwoVerify .troubeEmail a:hover {
+    text-decoration: none;
+}
+.loginPage .loginTwoVerify .errorMsg {
+    font-size: 14px;
+    color: #cb0000;
+    padding-top: 20px;
+}
+.loginPage .loginTwoVerify .btn {
+    margin-top: 20px;
+    margin-bottom: 6px;
+    display: inline-block;
+    padding: 0 40px;
+    letter-spacing: 1px;
+}
+.loginPage .loginTwoVerify .phoneVerifyNote {
+    font-size: 14px;
+    color: #888888;
+    line-height: 21px;
+    padding-right: 4px;
+    margin-top: 30px;
+}
+@media screen and (max-width: 768px) {
+    .topSinceTip,
+    .loginPage .remberMeArea {
+        display: none;
+    }
+    .loginPage {
+        padding: 4.8rem 0;
+    }
+    .loginPage .registerAndSignheader .logo {
+        margin: 0 auto;
+    }
+    .loginPage .title {
+        display: none;
+    }
+    .loginPage .body {
+        margin: 0 1.6rem;
+        padding: 3rem 0 0 0;
+    }
+    .loginPage .rowA {
+        padding-bottom: 0;
+        margin-top: 3rem;
+    }
+    .loginPage .rowA label {
+        font-family: Hind-Medium, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        font-size: 1.4rem;
+        display: block;
+        line-height: 2.1rem;
+        margin-bottom: 0.8rem;
+        padding-bottom: 0;
+        text-transform: uppercase;
+    }
+    .loginPage .rowA input {
+        color: #0f0f0f;
+        background-color: #fff;
+        font-size: 1.5rem;
+        padding: 1rem 7rem 1rem 1rem;
+        width: 100%;
+        border-radius: 0;
+        box-sizing: border-box;
+        font-family: Hind-Regular, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        height: auto;
+    }
+    .loginPage .emailSuffix {
+        top: 4.7rem;
+        background: #fff;
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.08);
+        padding-left: 1.2rem;
+        box-sizing: border-box;
+        width: 100%;
+        line-height: 2.3rem;
+        font-size: 1.5rem;
+        font-family: Hind-Regular, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        border: 0;
+    }
+    .loginPage .emailSuffix li {
+        font-family: Hind-Regular, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        line-height: 2.3rem;
+        font-size: 1.5rem;
+        padding: 0.6rem 0;
+    }
+    .loginPage .emailSuffix li:first-child {
+        padding-top: 1.2rem;
+    }
+    .loginPage .emailSuffix li:last-child {
+        padding-bottom: 1.2rem;
+    }
+    .loginPage .emailSuffix li:active {
+        background: #f3f3f3;
+    }
+    .loginPage .clearIco {
+        width: 2.4rem;
+        height: 2.4rem;
+        background-size: 1.8rem 1.8rem;
+        right: 1.2rem;
+        margin-top: -1.2rem;
+    }
+    .loginPage  .passwordWarp .clearIco {
+        right: 4.8rem;
+    }
+    .loginPage .rowA .errMsg {
+        margin-top: 0;
+        height: inherit;
+        clear: both;
+        overflow: hidden;
+    }
+    .loginPage .forgotArea {
+        float: left;
+        clear: both;
+        margin-top: 0.8rem;
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+        color: #0f0f0f;
+        font-family: Hind-Regular, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        text-decoration: underline;
+    }
+    .loginPage .continue {
+        margin: 3.2rem auto 0 auto;
+        display: block;
+        max-width: 28.5rem;
+    }
+    .loginPage .noAccount {
+        padding-top: 2rem;
+    }
+    .loginPage .noAccount span {
+        display: none;
+    }
+    .loginPage .noAccount a {
+        box-sizing: border-box;
+        max-width: 28.5rem;
+        margin: 0 auto;
+        border: 0.1rem solid #0F0F0F;
+        border-radius: 0.2rem;
+        height: 4.4rem;
+        line-height: 4.4rem;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.4rem;
+        display: block;
+        font-family: Hind-Medium, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        text-decoration: none;
+    }
+    .loginPage .note {
+        display: none;
+    }
+    .loginPage .noEscortService {
+        color: #0f0f0f;
+        font-size: 1.2rem;
+        padding: 2.4rem 0;
+        text-align: center;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        font-family: Hind-Regular, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        display: block;
+    }
+    .loginPage .orRow {
+        height: 3.6rem;
+        margin: 3rem auto 2.3rem auto;
+        position: relative;
+        overflow: hidden;
+        max-width: 28.5rem;
+    }
+    .loginPage .orRow:before {
+        content: '';
+        display: block;
+        height: 0.1rem;
+        background-color: #dedede;
+        margin-top: 1.7rem;
+    }
+    .loginPage .orRow span {
+        width: 4.4rem;
+        height: 3.4rem;
+        line-height: 3.4rem;
+        text-align: center;
+        border-radius: 1.8rem;
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -1.8rem;
+        color: #ccc;
+        text-transform: lowercase;
+        font-size: 1.4rem;
+        font-family: Hind-Regular, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+    }
+    .loginPage .appleLoginBtn,
+    .loginPage .googleLoginBtn,
+    .loginPage .phoneLoginBtn {
+        max-width: 28.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        height: 4.2rem;
+        border: 0.1rem solid #0f0f0f;
+        padding-left: 0;
+        position: relative;
+        border: 0.1rem solid #dadce0;
+        border-radius: 0.2rem;
+    }
+    .loginPage .googleLoginBtn,
+    .loginPage .phoneLoginBtn {
+        margin-top: 2.4rem;
+    }
+    .loginPage .appleLoginBtn .appleIco,
+    .loginPage .googleLoginBtn .googleIco,
+    .loginPage .phoneLoginBtn .phoneIco {
+        width: 4.2rem;
+        height: 4.2rem;
+        position: absolute;
+        left: 0;
+        background-size: 3.6rem 3.6rem;
+    }
+    .loginPage .appleLoginBtn .appleIco {
+        margin-top: -0.4rem;
+    }
+    .loginPage .phoneLoginBtn .phoneIco {
+        background-size: 1.7rem 1.7rem;
+    }
+    .loginPage .appleLoginBtn span,
+    .loginPage .googleLoginBtn span,
+    .loginPage .phoneLoginBtn span {
+        line-height: 4.5rem;
+        font-size: 1.4rem;
+    }
+    .loginPage .loginErr {
+        padding-bottom: 2rem;
+    }
+    .loginPage .chooseVerifyType .registerAndSignheader {
+        display: none;
+    }
+    .loginPage .chooseVerifyType .chooseVerifyTypeHeader {
+        display: block;
+        position: relative;
+        height: 4.8rem;
+    }
+    .loginPage .chooseVerifyType .chooseVerifyTypeHeader .back {
+        width: 4.8rem;
+        height: 4.8rem;
+        background-repeat: no-repeat;
+        background-size: 1.8rem 1.8rem;
+        background-position: center;
+    }
+    .loginPage .chooseVerifyType .content {
+        margin: 0 1.6rem;
+        padding: 0 0 4rem 0;
+    }
+    .loginPage .chooseVerifyType h2 {
+        font-size: 2rem;
+        font-family: Hind-SemiBold, Arial, Helvetica, sans-serif;
+        line-height: 2.7rem;
+        letter-spacing: 1px;
+        margin-bottom: 3.2rem;
+    }
+    .loginPage .chooseVerifyType .mt62 {
+        margin-top: 0;
+    }
+    .loginPage .chooseVerifyType .p1 {
+        font-size: 1.4rem;
+        font-family: Hind-Regular, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        line-height: 2.1rem;
+    }
+    .loginPage .chooseVerifyType .mt24 {
+        margin-top: 1.6rem;
+    }
+    .loginPage .chooseVerifyType .typeItems {
+        margin: 4.7rem 0;
+    }
+    .loginPage .loginTwoVerify {
+        text-align: center;
+        padding: 3.2rem 2.7rem 3rem;
+    }
+    .loginPage .loginTwoVerify .loginTwoVerifyTitle {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-family: Hind-Medium, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        border: 0;
+        padding: 0;
+        line-height: inherit;
+    }
+    .loginPage .loginTwoVerify .text {
+        padding: 2rem 0;
+        font-size: 1.4rem;
+        color: #0f0f0f;
+        line-height: 1.9rem;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        text-align: center;
+    }
+    .loginPage .loginTwoVerify .text p,
+    .loginPage .loginTwoVerify .text p * {
+        font-family: Hind-Regular, Arial, Helvetica, sans-serif;
+    }
+    .loginPage .loginTwoVerify .numbers {
+        padding: 0.6rem 0 5rem 0;
+        position: relative;
+    }
+    .loginPage .loginTwoVerify input {
+        box-sizing: border-box;
+        font-size: 1.6rem;
+        display: block;
+        width: 3.6rem;
+        height: 3.6rem;
+        margin: 0 0.3rem;
+        text-align: center;
+        background: #f6f6f6;
+        border-radius: 0;
+    }
+    .loginPage .loginTwoVerify input:first-child {
+        margin: 0 0.3rem;
+    }
+    .loginPage .loginTwoVerify input.normal {
+        border: 0.1rem solid #f6f6f6;
+    }
+    .loginPage .loginTwoVerify input:focus {
+        background-color: #fff;
+        border: 0.1rem solid #0f0f0f;
+    }
+    .loginPage .loginTwoVerify .troubeEmail {
+        margin-top: 1.8rem;
+        font-size: 1.2rem;
+        color: #0f0f0f;
+    }
+    .loginPage .loginTwoVerify .phoneVerifyNote {
+        font-size: 1.2rem;
+        padding: 2rem 0 1rem 0;
+        color: #999;
+        text-align: left;
+        margin-top: 0;
+    }
+    .loginPage .loginTwoVerify .tryAgain {
+        position: absolute;
+        margin: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0;
+        font-size: 1.4rem;
+        line-height: inherit;
+        justify-content: center;
+    }
+    .loginPage .loginTwoVerify .tryAgain.active {
+        text-decoration: underline;
+    }
+    .loginPage .loginTwoVerify .errorMsg {
+        color: #db2f2f;
+        padding: 1.2rem 0 0 0;
+        line-height: 1.6rem;
+        text-align: left;
+    }
+    .loginPage .gRecaptcha {
+        max-width: 320px;
+        margin: auto;
+    }
+    .loginPage #passwordErrMsg {
+        display: block;
+    }
+    .loginPage .forgotArea:hover {
+        text-decoration: underline;
+    }
+}
+/************************* login page end *************************/
+/************************* register page start *************************/
+.registerPage .body {
+    margin: auto;
+    max-width: 500px;
+    padding: 60px 0;
+    text-align: left;
+}
+.registerPage .title {
+    font-size: 24px;
+    text-align: center;
+    font-family: Hind-SemiBold, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+.registerPage .showBackbone {
+    font-size: 14px;
+    line-height: 19px;
+    font-family: Hind-SemiBold, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    text-align: center;
+}
+.registerPage .body h4.noSugar {
+    color: #1b1b1b;
+    font-size: 14px;
+    font-family: Hind-Light, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.4px;
+    text-align: center;
+}
+.registerPage .rowA {
+    padding: 24px 0 20px 0;
+}
+.registerPage .rowA label {
+    font-size: 14px;
+    padding-bottom: 10px;
+    font-family: Hind-SemiBold, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+}
+.registerPage .rowA input.normal {
+    border: 1px solid #d1d1d1;
+}
+
+.registerPage .rowA input:focus {
+    border: 1px solid #1b1b1b;
+}
+.registerPage .rowA input {
+    box-sizing: border-box;
+    padding: 10px 18px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+}
+.registerPage .rowA .errMsg {
+    margin-top: 10px;
+    height: 20px;
+    line-height: 20px;
+}
+.registerPage .emailSuffix {
+    z-index: 3;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #ffffff;
+    border: 1px solid #d1d1d1;
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 32px;
+    font-size: 14px;
+}
+.registerPage .emailSuffix li {
+    cursor: pointer;
+    padding: 0 18px;
+}
+.registerPage .emailSuffix li:first-child {
+    padding-top: 3px;
+}
+.registerPage .emailSuffix li:last-child {
+    padding-bottom: 3px;
+}
+.registerPage .emailSuffix li:active,
+.registerPage .emailSuffix li:hover {
+    background: #f3f3f3;
+}
+.registerPage .emailRow {
+    position: relative;
+}
+.registerPage .spArea {
+    color: #666666;
+    font-size: 14px;
+}
+.registerPage .spArea .sty1.noSugar {
+    margin-bottom: 20px;
+    color: #000;
+    text-align: center;
+    font-family: Hind-Medium, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+}
+.registerPage .spArea .sty1 {
+    letter-spacing: 1px;
+    font-family: Hind-Light, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+}
+.registerPage .spArea p {
+    margin-top: 20px;
+    line-height: 20px;
+    font-family: Hind-Light, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+}
+.registerPage .agree {
+    margin-top: 38px;
+    position: relative;
+    line-height: 20px;
+    text-indent: 10px;
+    font-size: 14px;
+    overflow: hidden;
+}
+.registerPage .agree .checkbox {
+    float: left;
+}
+.registerPage .agree a {
+    color: #0f0f0f;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.registerPage .agree p {
+    display: inline;
+    cursor: pointer;
+}
+.registerPage .gRecaptcha {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.registerPage .continue {
+    margin-top: 22px;
+    text-transform: uppercase;
+}
+.registerPage .notEscortService {
+    padding: 20px 0;
+    font-size: 14px;
+}
+.registerPage  .alreadyMemberTip {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+.registerPage  .alreadyMemberTip a {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.registerPage  .alreadyMemberTip a:hover {
+    text-decoration: none;
+}
+.registerPage  .privacySafe {
+    font-size: 14px;
+    font-family: Hind-Light, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    color: #1b1b1b;
+    line-height: 21px;
+    margin-top: 16px;
+    text-align: center;
+}
+.registerPage  .privacySafe a {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.registerPage .privacySafe a:hover {
+    text-decoration: none;
+}
+.registerPage .desableRegister {
+    width: 600px;
+}
+.registerPage .desableRegister .tit {
+    padding-top: 10px;
+    padding-bottom: 24px;
+    font-size: 20px;
+    border-bottom: 1px solid #d9d9d9;
+    text-transform: uppercase;
+    font-family: Hind-SemiBold, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+}
+.registerPage .desableRegister .p1 {
+    font-size: 16px;
+    padding: 28px 0;
+    line-height: 30px;
+}
+.registerPage .desableRegister .alreadyAMember {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.registerPage .desableRegister .btn {
+    display: block;
+    text-transform: uppercase;
+    width: 130px;
+    margin-bottom: 10px;
+}
+.registerPage .guidelines {
+    font-size: 16px;
+}
+.registerPage .guidelines h3 {
+    font-size: 20px;
+    font-family: Hind-SemiBold, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+.registerPage .guidelines .p1 {
+    color: #1b1b1b;
+    line-height: 30px;
+    font-family: Hind-Light, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+}
+.registerPage .guidelines h4 {
+    padding: 22px 0;
+    font-family: Hind-SemiBold, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+}
+.registerPage .guidelines .itemList li {
+    padding: 0 5px 0 15px;
+    display: flex;
+    align-items: top;
+    margin-bottom: 30px;
+    position: relative;
+    justify-content: flex-start;
+}
+.registerPage .guidelines .itemList li .checkbox {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+.registerPage .guidelines .itemList li:first-child {
+    margin-bottom: 24px;
+}
+.registerPage .guidelines .itemList li .rContent {
+    padding-left: 15px;
+    cursor: pointer;
+}
+.registerPage .guidelines .itemList li .rContent h6 {
+    position: relative;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: Hind-SemiBold, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    margin-bottom: 3px;
+}
+.registerPage .guidelines .itemList li .rContent p {
+    line-height: 19px;
+}
+.registerPage .guidelines .buttonBox {
+    padding: 5px 0 20px 0;
+}
+.registerPage .guidelines .buttonBox .btn {
+    width: 130px;
+}
+.registerPage .safetyPledge {
+    max-width: 710px;
+}
+.registerPage .safetyPledge h3 span {
+    font-size: 18px;
+    line-height: 25px;
+    font-family: Hind-SemiBold, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: -0.57px;
+    text-transform: uppercase;
+}
+.registerPage .safetyPledge h3 span.safeIcon {
+    display: none;
+}
+.registerPage .safetyPledge .line {
+    margin-top: 25px;
+    height: 1px;
+    background-color: #d8d8d8;
+}
+.registerPage .safetyPledge .items h4 {
+    font-size: 16px;
+    line-height: 26px;
+    font-family: Hind-Medium, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    margin-top: 28px;
+    text-transform: uppercase;
+}
+.registerPage .safetyPledge .items h3 {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 12px;
+    font-family: Hind-Light, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+}
+.registerPage .safetyPledge .items ul {
+    padding: 6px 0;
+    box-sizing: border-box;
+}
+.registerPage .safetyPledge .items ul li {
+    padding: 8px 0 8px 13px;
+    position: relative;
+    font-size: 16px;
+    line-height: 26px;
+}
+.registerPage .safetyPledge .items ul li:before {
+    display: block;
+    content: '';
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    top: 16px;
+    background-color: #1b1b1b;
+    border-radius: 50%;
+}
+.registerPage .safetyPledge .btns {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-start;
+}
+.registerPage .safetyPledge .btns .btn.disagree {
+    background-color: #fff;
+    border: 1px solid #1b1b1b;
+    color: #1b1b1b;
+    width: 116px;
+    height: 38px;
+    display: block;
+    margin-left: 0;
+}
+.registerPage .safetyPledge .btns .btn {
+    margin-left: 18px;
+    width: 118px;
+    display: block;
+}
+.registerPage .mobileWarp {
+    display: none;
+}
+.registerPage .pcWarp {
+    display: block;
+}
+.registerPage .center {
+    text-align: center;
+}
+.registerPage .privacySafe {
+    font-size: 14px;
+    font-family: Hind-Light, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    color: #1b1b1b;
+    line-height: 21px;
+    margin-top: 16px;
+    text-align: center;
+}
+.registerPage .privacySafe a {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.registerPage .privacySafe a:hover {
+    text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+    .registerPage .mobileWarp {
+        display: block;
+    }
+    .registerPage .pcWarp,
+    .registerPage .registerAndSignheader,
+    .registerPage .topSinceTip {
+        display: none;
+    }
+    .registerPage .header {
+        display: block;
+        position: relative;
+        height: 4.8rem;
+    }
+    .registerPage .header .back {
+        width: 4.8rem;
+        height: 4.8rem;
+        background-repeat: no-repeat;
+        background-size: 1.8rem 1.8rem;
+        background-position: center;
+    }
+    .registerPage .body {
+        padding: 0;
+        margin: 0 1.6rem;
+    }
+    .registerPage .title {
+        font-size: 2rem;
+        color: #0f0f0f;
+        line-height: 3.2rem;
+        font-family: Hind-SemiBold, Arial, Helvetica, sans-serif;
+        letter-spacing: 0.3px;
+        margin-bottom: 0;
+    }
+    .registerPage .body {
+        margin: 0 1.6rem;
+        padding: 0;
+    }
+    .registerPage .formItem {
+        margin-top: 2.2rem;
+    }
+    .registerPage .formItem label {
+        font-size: 1.4rem;
+        color: #0f0f0f;
+        line-height: 2.1rem;
+        display: block;
+        text-transform: uppercase;
+        font-family: Hind-SemiBold, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+    }
+    .registerPage .genderItems {
+        overflow: hidden;
+    }
+    .registerPage .genderItems li {
+        float: left;
+        width: calc((100% - 1.5rem) / 2);
+        box-sizing: border-box;
+        font-family: Hind-Regular, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        border-radius: 0.1rem;
+        font-size: 1.5rem;
+        text-align: center;
+        margin-right: 1.5rem;
+        margin-top: 1rem;
+        border: 0.1rem solid #eeeeee;
+        padding: 1.1rem 0rem;
+    }
+    .registerPage .genderItems li.selected {
+        border-color: #0f0f0f;
+    }
+    .registerPage .genderItems li:nth-child(2n) {
+        margin-right: 0;
+    }
+    .registerPage .ageOptions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .registerPage .ageOptions li {
+        vertical-align: middle;
+        color: #666;
+        width: calc((100% - 2rem) / 2);
+    }
+    .registerPage .ageOptions li:nth-child(2) {
+        padding: 0 1rem 0 1rem;
+        width: auto;
+    }
+    .registerPage .ageOptions li:first-child {
+        padding-left: 0;
+    }
+    .registerPage .ageOptions select {
+        padding: 0 1.4rem;
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+        text-align-last: center; /*ios*/
+        color: #0f0f0f;
+        height: 4.8rem;
+        line-height: 4.8rem;
+        background: transparent;
+        border: 0.1rem solid #eee;
+        box-sizing: border-box;
+        border-radius: 0;
+        font-family: Hind-Regular, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+    }
+    .registerPage .ageOptions select:focus {
+        border-color: #0f0f0f;
+    }
+    .registerPage .btn {
+        display: block;
+        max-width: 28rem;
+        margin: 3rem auto 0 auto;
+    }
+    .registerPage .notEscortService {
+        padding: 2rem 0;
+        line-height: 2rem;
+        font-size: 1.4rem;
+        text-align: center;
+        font-family: Hind-Regular, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+    }
+    .registerPage .desableRegister {
+        padding: 3.2rem 1.6rem;
+        text-align: center;
+        letter-spacing: 0;
+        width: auto;
+    }
+    .registerPage .desableRegister .tit {
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05rem;
+        padding: 0;
+        border: 0;
+    }
+    .registerPage .desableRegister .p1 {
+        padding: 2.4rem 0 0rem 0;
+        font-size: 1.5rem;
+        color: #0f0f0f;
+        line-height: 2.3rem;
+        font-family: Hind-Regular, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+    }
+    .registerPage .desableRegister .alreadyAMember {
+        font-size: 1.5rem;
+        color: #0f0f0f;
+        line-height: 2.3rem;
+        padding: 1.6rem 0;
+        font-family: Hind-Regular, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        margin-bottom: 0;
+    }
+    .registerPage .desableRegister .btn {
+        width: 22rem;
+        margin: 0 auto;
+    }
+    .registerPage .publicDialog .guidelinesBody {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 0;
+        box-sizing: border-box;
+    }
+    .registerPage .guidelines h3 {
+        width: 100%;
+        padding: 0 4.6rem;
+        box-sizing: border-box;
+        margin: auto;
+        font-size: 1.7rem;
+        font-family: Hind-SemiBold, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.05rem;
+        color: #0F0F0F;
+        height: 4.8rem;
+        line-height: 5.4rem;
+        text-align: center;
+        overflow: unset;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        border: 0;
+    }
+    .registerPage .guidelines {
+        height: 100%;
+    }
+    .registerPage .guidelines .guidelinesContent {
+        padding: 1.25rem 1.6rem 0 1.6rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: calc(100% - 4.8rem);
+        box-sizing: border-box;
+    }
+    .registerPage .guidelines .p1 {
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+        font-family: Hind-Regular, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+    }
+    .registerPage .guidelines .note {
+        margin-top: 2rem;
+    }
+    .registerPage .guidelines h4 {
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+        font-family: Hind-Medium, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        margin-top: 2rem;
+        padding: 0;
+    }
+    .registerPage .guidelines .itemList {
+        margin-top: 2.1rem;
+    }
+    .registerPage .guidelines .itemList li,
+    .registerPage .guidelines .itemList li:first-child {
+        padding: 0 0 2.4rem 0;
+        margin-bottom: 0;
+    }
+    .registerPage .guidelines .itemList li:last-child {
+        padding-bottom: 0;
+    }
+    .registerPage .guidelines .itemList li .checkbox {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-top: 0.1rem;
+    }
+    .registerPage .guidelines .itemList li .rContent {
+        padding-left: 1rem;
+    }
+    .registerPage .guidelines .itemList li .rContent h6 {
+        position: relative;
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+        font-family: Hind-Medium, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        margin-bottom: 0.3rem;
+    }
+    .registerPage .guidelines .itemList li .rContent p {
+        padding-right: 0.5rem;
+        font-family: Hind-Regular, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        font-size: 1.4rem;
+    }
+    .registerPage .guidelines .buttonBox {
+        padding: 0.8rem 0 2.6rem 0;
+    }
+    .registerPage .guidelines .buttonBox .btn {
+        width: 28rem;
+    }
+    .registerPage .safetyPledge h3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2.3rem;
+        padding-bottom: 1.9rem;
+        color: #000;
+    }
+    .registerPage .safetyPledge h3 span {
+        display: block;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        font-family: Hind-SemiBold, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+    }
+    .registerPage .safetyPledge h3 span.safeIcon {
+        width: 1.6rem;
+        height: 1.6rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 1.4rem auto;
+        display: block;
+        margin-right: 0.8rem;
+        margin-top: -0.4rem;
+    }
+    .registerPage .safetyPledge .line {
+        display: none;
+    }
+    .registerPage .safetyPledge .items {
+        margin: 0 1.6rem;
+    }
+    .registerPage .safetyPledge .items h4 {
+        color: #1b1b1b;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        font-family: Hind-Medium, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        margin-top: 0;
+    }
+    .registerPage .safetyPledge .itemContentWarp {
+        max-height: calc(100vh - 30rem);
+        position: relative;
+        overflow: hidden;
+    }
+    .registerPage .safetyPledge .itemContentWarp:after {
+        display: block;
+        content: '';
+        position: absolute;
+        right: 0rem;
+        bottom: 0rem;
+        width: 100%;
+        height: 7rem;
+        background: #ffffff;
+        background: linear-gradient(360deg, #ffffff 20%, rgba(0, 0, 0, 0) 100%);
+        z-index: 9;
+        pointer-events: none;
+    }
+    .registerPage .safetyPledge .itemContent {
+        max-height: calc(100vh - 35rem);
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding-right: 0.5rem;
+        box-sizing: border-box;
+        padding-bottom: 5rem;
+    }
+    .registerPage .safetyPledge .items h3 {
+        font-size: 1.2rem;
+        line-height: 1.9rem;
+        margin-top: 0;
+        font-family: Hind-Regular, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+        padding-top: 1.4rem;
+        padding-bottom: 0;
+    }
+    .registerPage .safetyPledge .items ul li:before {
+        width: 0.3rem;
+        height: 0.3rem;
+        border-radius: 50%;
+        top: 1.45rem;
+    }
+    .registerPage .safetyPledge .items ul li {
+        position: relative;
+        font-size: 1.2rem;
+        line-height: 1.9rem;
+        padding-left: 1.4rem;
+        font-family: Hind-Regular, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.3px;
+    }
+    .registerPage .safetyPledge .btns {
+        display: flex;
+        justify-content: center;
+        min-height: 5rem;
+        box-sizing: border-box;
+        margin-top: -0.1rem;
+    }
+    .registerPage .safetyPledge .btns .btn.disagree,
+    .registerPage .safetyPledge .btns .btn {
+        flex: 1;
+        width: auto;
+        border-color: #fff;
+        font-family: Hind-Medium, Arial, Helvetica, sans-serif;
+        text-align: center;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05rem;
+        background-color: #fff;
+        color: #0f0f0f;
+        margin: 0;
+        height: 5rem;
+        line-height: 5rem;
+    }
+    .registerPage .safetyPledge .btns .btn.disagree {
+        border-right: 0.1rem solid #efefef;
+        color: #888;
+    }
+    .registerPage .wordTips {
+        width: 100%;
+        margin-top: 3rem;
+        padding: 0 1rem;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 1.5rem;
+        line-height: 1.9rem;
+    }
+    .registerPage .wordTips p {
+        font-family: Hind-Regular,Arial,Helvetica,sans-serif;
+        font-weight: 400;
+        letter-spacing: .3px;
+        font-size: 1.5rem;
+    }
+    .registerPage .wordTips .noSugar {
+        width: 80%;
+        height: 4rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+    .registerPage .wordTips .noSugar .icon {
+        width: 4rem;
+        height: 4rem;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 100%;
+    }
+    .registerPage .wordTips .noSugar .noSugarTip {
+        font-family: Hind-Regular,Arial,Helvetica,sans-serif;
+        font-weight: 400;
+        letter-spacing: .3px;
+        font-size: 1.5rem;
+        line-height: 4rem;
+    }
+    .registerPage .otherLogin {
+        max-width: 28.5rem;
+        margin: 0 auto;
+        padding-bottom: 2rem;
+    }
+    .registerPage .otherLogin .orRow {
+        height: 3.6rem;
+        margin: 2.3rem 0 2.3rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .registerPage .otherLogin .orRow:before {
+        content: '';
+        display: block;
+        height: 0.1rem;
+        background-color: #dedede;
+        margin-top: 1.7rem;
+    }
+    .registerPage .otherLogin .orRow span {
+        width: 4.4rem;
+        text-transform: lowercase;
+        height: 3.4rem;
+        line-height: 3.4rem;
+        text-align: center;
+        border-radius: 1.8rem;
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -1.8rem;
+        color: #ccc;
+        font-size: 1.4rem;
+        font-family: Hind-Regular,Arial,Helvetica,sans-serif;
+        font-weight: 400;
+        letter-spacing: .3px;
+    }
+    .registerPage .appleLoginBtn,
+    .registerPage .googleLoginBtn,
+    .registerPage .phoneLoginBtn {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        cursor: pointer;
+        max-width: 28.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        height: 4.2rem;
+        border: 0.1rem solid #0f0f0f;
+        padding-left: 0;
+        position: relative;
+        border: 0.1rem solid #dadce0;
+        border-radius: 0.2rem;
+    }
+    .registerPage .googleLoginBtn,
+    .registerPage .phoneLoginBtn {
+        margin-top: 2.4rem;
+    }
+    .registerPage .appleLoginBtn .appleButton {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+    .registerPage .appleLoginBtn .appleIco,
+    .registerPage .googleLoginBtn .googleIco,
+    .registerPage .phoneLoginBtn .phoneIco {
+        width: 4.2rem;
+        height: 4.2rem;
+        position: absolute;
+        left: 0;
+        background-size: 3.6rem 3.6rem;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .registerPage .appleLoginBtn .appleIco {
+        margin-top: -0.4rem;
+    }
+    .registerPage .phoneLoginBtn .phoneIco {
+        background-size: 1.7rem 1.7rem;
+    }
+    .registerPage .appleLoginBtn span,
+    .registerPage .googleLoginBtn span,
+    .registerPage .phoneLoginBtn span {
+        font-family: Hind-Medium, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.02rem;
+        line-height: 4.5rem;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+    .registerPage .privacySafe a {
+        font-family: Hind-Light, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.2px;
+    }
+}
+/************************* register page start *************************/

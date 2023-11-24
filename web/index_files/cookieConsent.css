@@ -1,0 +1,224 @@
+.dark.cc_dialog.simple {
+    width: 100%;
+    max-width: 100%;
+    background: #fff;
+    padding: 20px 0 20px 15px !important;
+    box-sizing: border-box;
+    border-top: 1px solid #3e3e3e;
+}
+.dark.cc_dialog.simple .cc_dialog_headline {
+    display: none;
+}
+.dark.cc_dialog.simple > div > div {
+    float: left;
+    max-width: calc(100% - 357px);
+    padding-right: 20px;
+}
+.dark.cc_dialog.simple > div > div.cc_cp_container {
+    max-width: 100%;
+}
+.dark.cc_dialog.simple .cc_dialog_text {
+    font-size: 14px;
+    font-family: Hind-Light, Arial, Helvetica, sans-serif;
+    letter-spacing: 0.2px;
+    line-height: 25px;
+    font-weight: normal;
+    color: #0F0F0F;
+    margin-bottom: 0;
+}
+.dark.cc_dialog.simple > div > div button.cc_b_ok {
+    float: right;
+    background: #1b1b1b;
+    width: 100px;
+    height: 40px;
+    padding: 0;
+    border-radius: 0;
+    font-family: Hind-Light, Arial, Helvetica, sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: normal;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.dark.cc_dialog.simple > div > div button.cc_b_cp {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #1b1b1b;
+    background: #fff;
+    font-size: 14px;
+    color: #0F0F0F;
+    padding: 0;
+    width: 220px;
+    margin-right: 13px;
+    font-family: Hind-Light, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.dark.cc_dialog.simple > div > div button:hover {
+    opacity: 0.8;
+}
+.dark.cc_dialog.simple > div > div button.cc_b_ok:active {
+    background: #3e3e3e;
+}
+.dark.cc_dialog.simple > div > div:last-child {
+    margin-top: 7px;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container {
+    background: #fff;
+    padding: 0 30px;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_head {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_head p,
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_content .cc_cp_m_content p,
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_content .cc_cp_m_content h1,
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_head h2,
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_content .cc_cp_m_menu li a,
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_footer .cc_cp_f_powered_by,
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_footer .cc_cp_f_powered_by a {
+    color: #0F0F0F;
+    font-family: Hind-Light, Arial, Helvetica, sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: normal;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_content .cc_cp_m_menu li a,
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_content .cc_cp_m_content p {
+    font-size: 14px;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_content .cc_cp_m_content h1 {
+    font-family: Hind-Medium, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_content .cc_cp_m_menu li[active='true'] a {
+    color: #1b1b1b !important;
+    text-decoration: underline;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_content .cc_cp_m_menu li a:hover {
+    text-decoration: underline !important;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_content .cc_cp_m_content,
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_content .cc_cp_m_menu li[active='true'],
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_content .cc_cp_m_menu li,
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_content .cc_cp_m_menu {
+    background: #fff !important;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_content .cc_cp_m_menu li {
+    border: none;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_content .cc_cp_m_content .cc_cp_m_content_entry[active='true'] {
+    padding-right: 0;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_content .cc_cp_m_content {
+    width: 100%;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_content .cc_cp_m_content a {
+    color: #1b1b1b !important;
+    text-decoration: underline;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_content .cc_cp_m_content a:focus {
+    box-shadow: none;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_footer {
+    background: #fff !important;
+    border: none;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_footer .cc_cp_f_powered_by a {
+    font-weight: bold;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_footer .cc_cp_f_save button {
+    background: #3e3e3e;
+    color: #fff;
+    border-radius: 0;
+    font-family: Hind-Light, Arial, Helvetica, sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_head h2 {
+    font-family: Hind-Medium, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_head .cc_cp_head_lang_selector {
+    position: relative;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_head .cc_cp_head_lang_selector::before {
+    content: '';
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 7px solid #000;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_head .cc_cp_head_lang_selector::after {
+    content: '';
+    position: absolute;
+    right: 22px;
+    top: 47%;
+    transform: translateY(-50%);
+    border-top: 7px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_head .cc_cp_head_lang_selector select {
+    height: 38px;
+    border: 1px solid #ddd;
+    padding: 0 6px 0 12px;
+    cursor: pointer;
+    font-size: 16px;
+    background: transparent;
+    width: 115px;
+    position: relative;
+    z-index: 9;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_head .cc_cp_head_lang_selector select:focus {
+    border: 1px solid #ddd;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot input[type='checkbox'].checkbox_cookie_consent + label {
+    color: #1b1b1b !important;
+    font-family: Hind-Light, Arial, Helvetica, sans-serif;
+    letter-spacing: 0.2px;
+    font-weight: normal;
+}
+.dark.cookie-consent-preferences-overlay.cc_css_reboot input[type='checkbox'].checkbox_cookie_consent:checked + label:before {
+    background: #3e3e3e;
+}
+@media screen and (max-width: 769px) {
+    .dark.cc_dialog.simple {
+        padding: 35px 10px 25px 10px !important;
+    }
+    .dark.cc_dialog.simple > div > div {
+        float: none;
+        padding-right: 0;
+        clear: both;
+        max-width: none;
+    }
+    .dark.cc_dialog.simple > div > div:last-child {
+        float: left;
+        margin-top: 15px;
+    }
+    .cc_cp_head_lang_selector::before,
+    .cc_cp_head_lang_selector::after {
+        display: none;
+    }
+}
+@media screen and (max-width: 320px) {
+    .dark.cc_dialog.simple > div > div button.cc_b_ok {
+        float: inherit;
+        margin-bottom: 15px;
+    }
+    .dark.cc_dialog.simple > div > div button.cc_b_cp {
+        margin-left: 0 !important;
+    }
+}

